@@ -46,16 +46,16 @@
     color:var(--muted);
     line-height:1.6;
   }
-  .cta{
-    background:linear-gradient(90deg,var(--primary),#1565c0);
-    color:white;
-    padding:10px 14px;
-    border-radius:10px;
-    font-weight:700;
-    text-decoration:none;
-    display:inline-block;
-    margin-bottom:24px;       /* keeps button away from cards */
-  }
+  .cta {
+  display: inline-block;  /* keeps it aligned */
+  margin-bottom: 20px;    /* prevents button from sticking to next cards */
+  background: linear-gradient(90deg, var(--primary), #1565c0);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
 
   .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:16px}
   .card{background:white;border-radius:12px;padding:16px; box-shadow:0 6px 24px rgba(16,24,40,0.06); border:1px solid #f5f7fb}
