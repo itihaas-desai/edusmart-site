@@ -1,0 +1,171 @@
+  <!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>EduSmart — Start Learning</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --primary:#1e88e5; /* blue */
+    --accent:#ffb703;  /* orange */
+    --muted:#556070;
+    --bg:#ffffff;
+    --card:#fbfbfd;
+    --radius:12px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial; background:var(--bg); color:#0f1720}
+  header{position:sticky; top:0; z-index:40; background:rgba(255,255,255,0.96); border-bottom:1px solid #f4f6f8}
+  .container{max-width:1100px; margin:0 auto; padding:18px}
+
+  .nav{display:flex; align-items:center; justify-content:space-between}
+  .brand{display:flex; gap:12px; align-items:center}
+  .logo{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),#43a047); color:white; font-weight:800}
+  .sitename{font-weight:700;color:var(--primary)}
+
+  nav ul{display:flex; gap:12px; list-style:none; margin:0; padding:0}
+  nav a{padding:8px 12px; border-radius:8px; text-decoration:none; color:var(--muted); font-weight:600}
+  nav a:hover{background:#f3f7ff}
+
+  .hero{display:flex; gap:28px; align-items:center; padding:32px 0}
+  .hero h1{margin:0 0 8px; font-size:32px}
+  .hero p{margin:0;color:var(--muted)}
+  .cta{background:linear-gradient(90deg,var(--primary),#1565c0); color:white; padding:10px 14px; border-radius:10px; font-weight:700; text-decoration:none}
+
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:16px}
+  .card{background:white;border-radius:12px;padding:16px; box-shadow:0 6px 24px rgba(16,24,40,0.06); border:1px solid #f5f7fb}
+  .tag{font-size:12px; color:var(--muted)}
+  .card h3{margin:8px 0 6px}
+
+  .btn{padding:8px 12px;border-radius:10px;text-decoration:none;background:#f3f8ff;color:var(--primary); font-weight:700}
+
+  section{padding:22px 0;border-top:1px solid #f6f7fb}
+
+  #backTop{position:fixed; right:20px; bottom:22px; width:48px;height:48px;border-radius:14px; display:grid; place-items:center; background:var(--primary); color:white; cursor:pointer; box-shadow:0 10px 28px rgba(16,24,40,0.12)}
+  footer{padding:28px 0; border-top:1px solid #f6f7fb; color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">ES</div>
+      <div>
+        <div class="sitename">EduSmart</div>
+        <div style="font-size:12px;color:var(--muted)">Demo learning platform</div>
+      </div>
+    </div>
+
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#workshops">Workshops</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container" id="home">
+  <div class="hero">
+    <div style="flex:1">
+      <h1>Learn skills that matter</h1>
+      <p class="tag">Short courses and workshops to help you upskill — hands-on, practical, demo content only.</p>
+      <a class="cta" href="#courses">Start Learning</a>
+
+      <div style="margin-top:18px; display:flex; gap:12px;">
+        <div class="card" style="max-width:220px">
+          <div class="tag">Featured</div>
+          <h3>Intro to UX Design</h3>
+          <p style="margin:6px 0;color:var(--muted)">A bite-sized course to start designing usable interfaces.</p>
+          <div style="margin-top:8px"><a class="btn" href="#courses">View course</a></div>
+        </div>
+
+        <div class="card" style="max-width:220px">
+          <div class="tag">Workshop</div>
+          <h3>Resume Clinic</h3>
+          <p style="margin:6px 0;color:var(--muted)">Live mockups & feedback (demo listing).</p>
+          <div style="margin-top:8px"><a class="btn" href="#workshops">Register</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="width:300px">
+      <div class="card">
+        <div class="tag">Top categories</div>
+        <ul style="margin:8px 0 0;padding:0 0 0 16px;color:var(--muted)">
+          <li>Tech</li><li>Business</li><li>Design</li><li>Language</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Courses -->
+  <section id="courses">
+    <h2>Courses</h2>
+    <p class="tag">Explore demo courses by category</p>
+    <div class="grid">
+      <div class="card"><div class="tag">Tech</div><h3>Python Basics</h3><p style="color:var(--muted)">Intro to Python for automation.</p></div>
+      <div class="card"><div class="tag">Business</div><h3>Intro to Marketing</h3><p style="color:var(--muted)">Foundations & strategy basics.</p></div>
+      <div class="card"><div class="tag">Design</div><h3>UI Essentials</h3><p style="color:var(--muted)">Design principles & mockups.</p></div>
+      <div class="card"><div class="tag">Language</div><h3>Conversational English</h3><p style="color:var(--muted)">Everyday speaking practice.</p></div>
+    </div>
+  </section>
+
+  <!-- Workshops -->
+  <section id="workshops">
+    <h2>Workshops</h2>
+    <p class="tag">Live demo sessions (dummy register button)</p>
+    <div class="grid">
+      <div class="card"><div class="tag">Date: Oct 12</div><h3>Portfolio Review</h3><p style="color:var(--muted)">Bring one project — feedback session.</p><div style="margin-top:10px"><a class="btn" href="#" onclick="alert('Demo register — not functional')">Register (Demo)</a></div></div>
+      <div class="card"><div class="tag">Date: Nov 3</div><h3>Interview Prep</h3><p style="color:var(--muted)">Mock interviews & tips.</p><div style="margin-top:10px"><a class="btn" href="#" onclick="alert('Demo register — not functional')">Register (Demo)</a></div></div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section id="resources">
+    <h2>Resources</h2>
+    <p class="tag">Free guides and sample PDFs (download buttons inactive)</p>
+    <div class="grid">
+      <div class="card"><div class="tag">Guide</div><h3>Resume Template</h3><p style="color:var(--muted)">Editable resume format.</p><div style="margin-top:10px"><a class="btn" href="#" onclick="alert('Download demo — not functional')">Download (Demo)</a></div></div>
+      <div class="card"><div class="tag">E-book</div><h3>Design Checklist</h3><p style="color:var(--muted)">Short checklist for UI reviews.</p><div style="margin-top:10px"><a class="btn" href="#" onclick="alert('Download demo — not functional')">Download (Demo)</a></div></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About</h2>
+    <p class="tag">EduSmart is a demo platform to showcase course/workflow design. Trainers are fictional for demo purposes.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="tag">Support contact (demo)</p>
+    <form onsubmit="event.preventDefault(); alert('Demo contact — no submission');" style="max-width:720px; display:grid; gap:8px">
+      <input placeholder="Name" style="padding:12px;border-radius:8px;border:1px solid #eee" />
+      <input placeholder="Email" style="padding:12px;border-radius:8px;border:1px solid #eee" />
+      <textarea placeholder="Message" rows="4" style="padding:12px;border-radius:8px;border:1px solid #eee"></textarea>
+      <button class="btn" type="submit">Send (Demo)</button>
+    </form>
+  </section>
+
+  <footer style="margin-top:18px">
+    <div style="display:flex; justify-content:space-between; align-items:center; color:var(--muted)">
+      <div><strong style="color:var(--primary)">EduSmart</strong> — Demo learning site</div>
+      <div>© EduSmart — Demo</div>
+    </div>
+  </footer>
+</main>
+
+<button id="backTop" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+</body>
+</html>
