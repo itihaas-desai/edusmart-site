@@ -1,4 +1,4 @@
-  <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -30,14 +30,32 @@
   nav a{padding:8px 12px; border-radius:8px; text-decoration:none; color:var(--muted); font-weight:600}
   nav a:hover{background:#f3f7ff}
 
-  .hero{display:flex; gap:28px; align-items:center; padding:32px 0}
-  .hero h1{margin:0 0 16px; /* add bottomspace */
-           font-size:32px}
-  .hero p{margin:0 0 20px;color:var(--muted)  line-height: 1.6;}
-  .cta {
-  display: inline-block;  /* keeps it aligned */
-  margin-bottom: 20px;    /* prevents button from sticking to next cards */
-} {background:linear-gradient(90deg,var(--primary),#1565c0); color:white; padding:10px 14px; border-radius:10px; font-weight:700; text-decoration:none}
+  .hero{
+    display:flex;
+    gap:28px;
+    align-items:flex-start;   /* fixed alignment */
+    padding:32px 0;
+  }
+  .hero h1{
+    margin:0 0 16px;          /* spacing added */
+    font-size:32px;
+    line-height:1.3;
+  }
+  .hero p{
+    margin:0 0 20px;          /* spacing below description */
+    color:var(--muted);
+    line-height:1.6;
+  }
+  .cta{
+    background:linear-gradient(90deg,var(--primary),#1565c0);
+    color:white;
+    padding:10px 14px;
+    border-radius:10px;
+    font-weight:700;
+    text-decoration:none;
+    display:inline-block;
+    margin-bottom:24px;       /* keeps button away from cards */
+  }
 
   .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:16px}
   .card{background:white;border-radius:12px;padding:16px; box-shadow:0 6px 24px rgba(16,24,40,0.06); border:1px solid #f5f7fb}
@@ -84,7 +102,7 @@
       <p class="tag">Short courses and workshops to help you upskill — hands-on, practical, demo content only.</p>
       <a class="cta" href="#courses">Start Learning</a>
 
-      <div style="margin-top:18px; display:flex; gap:12px;">
+      <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap;">
         <div class="card" style="max-width:220px">
           <div class="tag">Featured</div>
           <h3>Intro to UX Design</h3>
