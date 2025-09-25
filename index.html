@@ -31,9 +31,13 @@
   nav a:hover{background:#f3f7ff}
 
   .hero{display:flex; gap:28px; align-items:center; padding:32px 0}
-  .hero h1{margin:0 0 8px; font-size:32px}
-  .hero p{margin:0;color:var(--muted)}
-  .cta{background:linear-gradient(90deg,var(--primary),#1565c0); color:white; padding:10px 14px; border-radius:10px; font-weight:700; text-decoration:none}
+  .hero h1{margin:0 0 16px; /* add bottomspace */
+           font-size:32px}
+  .hero p{margin:0 0 20px;color:var(--muted)  line-height: 1.6;}
+  .cta {
+  display: inline-block;  /* keeps it aligned */
+  margin-bottom: 20px;    /* prevents button from sticking to next cards */
+} {background:linear-gradient(90deg,var(--primary),#1565c0); color:white; padding:10px 14px; border-radius:10px; font-weight:700; text-decoration:none}
 
   .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:16px}
   .card{background:white;border-radius:12px;padding:16px; box-shadow:0 6px 24px rgba(16,24,40,0.06); border:1px solid #f5f7fb}
